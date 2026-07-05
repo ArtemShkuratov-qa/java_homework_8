@@ -4,7 +4,7 @@ import exceptions.tasks.exceptions.InvalidAgeException;
 import exceptions.tasks.exceptions.InvalidEmailException;
 
 public class Main {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         ExceptionsTasks exceptionsTasks = new ExceptionsTasks();
 
         //Проверка метода для обработки исключения FileNotFoundException
@@ -15,13 +15,13 @@ public class Main {
 
         //Проверка оработки исключения InvalidAgeException
         try {
-            exceptionsTasks.checkAge(19);
+            exceptionsTasks.checkAge(150);
         } catch (InvalidAgeException e) {
             System.out.println("Ошибка валидации: " + e.getMessage());
         }
 
         try {
-            exceptionsTasks.checkAge(160);
+            exceptionsTasks.checkAge(-1);
         } catch (InvalidAgeException e) {
             System.out.println("Ошибка валидации: " + e.getMessage());
         }
@@ -34,7 +34,7 @@ public class Main {
         }
 
         try {
-            exceptionsTasks.checkEmail("artem_shkuratov@bk");
+            exceptionsTasks.checkEmail("artem_shkuratov@bkм");
         } catch (InvalidEmailException e) {
             System.out.println("Ошибка: " + e.getMessage());
         }

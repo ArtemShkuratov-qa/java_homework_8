@@ -15,8 +15,8 @@ public class Box <T> {
 
     //2. Задача на дженерик метод
     //   Условие задачи: Напишите дженерик метод printArray, который принимает массив элементов любого типа и выводит каждый элемент массива на консоль.
-    public void printArray(T [] array) {
-        for (T element : array) {
+    public static <U> void printArray(U [] array) {
+        for (U element : array) {
             System.out.println(element);
         }
     }
